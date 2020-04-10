@@ -686,6 +686,7 @@ Expression *Visitor::optimizeAS(Expression *expr1, string op, Expression *expr2)
                 {
                     return expr2;
                 }
+                return new ExpressionSign("-",expr2);
             }
             else if ((exprId = dynamic_cast<ExpressionIdentifier *>(expr2)))
             {
